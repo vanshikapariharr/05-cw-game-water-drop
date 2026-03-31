@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water Drop Game</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Drop Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="game-wrapper">
-        <h1 class="game-title">Water Drop</h1>
-        <p class="game-tagline">Catch the good drops, avoid the bad ones!</p>
-        <div class="score-panel">
-            <div class="score">Score: <span id="score">0</span></div>
-            <div class="timer">Time: <span id="time">30</span>s</div>
-            <button id="start-btn">Start Game</button>
-        </div>
-        
-        <div id="game-container">
-        </div>
+  <div id="cw-game">
+    <div id="cw-header">
+      <h1>💧 Water Drop</h1>
+      <p>Help bring clean water to everyone! Catch good drops, avoid the bad ones.</p>
     </div>
-    
-    <script src="script.js"></script>
+
+    <div id="cw-controls">
+      <div class="cw-stat">Score: <span id="cw-score">0</span></div>
+      <div class="cw-stat">Lives: <span id="cw-lives">3</span></div>
+      <div id="cw-difficulty">
+        <button class="diff-btn active" data-diff="easy">Easy</button>
+        <button class="diff-btn" data-diff="normal">Normal</button>
+        <button class="diff-btn" data-diff="hard">Hard</button>
+      </div>
+      <div class="cw-stat">Time: <span id="cw-time">30</span>s</div>
+      <button id="cw-start-btn">▶ Start</button>
+    </div>
+
+    <div id="cw-arena">
+      <div id="cw-milestone"></div>
+      <div id="cw-msg"></div>
+      <div class="wave"></div>
+      <div id="cw-overlay">
+        <h2>💧 Water Drop</h2>
+        <p>Catch 💧 blue drops to score.<br>🌟 Golden drops = bonus points!<br>☠️ Avoid the red polluted drops.</p>
+        <p class="sub-text">Pick a difficulty, then start!</p>
+        <button id="cw-start-btn2">▶ Start Game</button>
+      </div>
+    </div>
+
+    <footer id="cw-footer">
+      <a href="https://www.charitywater.org" target="_blank">🌍 charity: water</a>
+      <a href="https://www.charitywater.org/donate" target="_blank">💛 Donate Now</a>
+      <a href="https://www.charitywater.org/our-work" target="_blank">📖 Our Work</a>
+      <p>Every $30 gives one person clean water for life.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
